@@ -73,7 +73,7 @@ class AnimatedWindow3D:
 def simple_main_3d():
     # Clear Orbit Values: 5.4524e26, 7.348e23, 384.4e7, 0, [0, 3000, 0]
     w = AnimatedWindow3D()
-    system = OscilatingSystem(5.4524e26, 7.348e23, 384.4e7, [0, 0, 0], [0, 3000, 0])
+    system = OscilatingSystem(5.4524e26, 7.348e23, 384.4e7, [0, 0, 500], [0, 3000, 0])
     dt = 43200  # In seconds, orbit of 85 days.
     steps = 10000
     ctr = 0

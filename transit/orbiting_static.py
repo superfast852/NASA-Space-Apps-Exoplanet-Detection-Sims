@@ -77,8 +77,8 @@ def frame_gen():
         i +=1
         yield i
 
-def update(frame):
-    global times, light_intensities, t, prev_time, true_t
+while True:
+    #global times, light_intensities, t, prev_time, true_t
     t += dt
     true_t += dt
     # Update exoplanet position
@@ -97,10 +97,10 @@ def update(frame):
         times=[]
         t=0
         light_intensities = []
-    #plt.draw()
-    #plt.pause(0.00001)
-    return intensity_line, light_intensities
+    plt.draw()
+    plt.pause(0.00001)
+    #return intensity_line, light_intensities
 
-#plt.show()
-ani = FuncAnimation(fig, update, frames=frame_gen, cache_frame_data=False)
-ani.save("transit_sim.mp4", writer='ffmpeg', fps=framerate, extra_args=['-vcodec', 'libx264', "-level", "3.0", "-pix_fmt", "yuv420p"])  # For MP4, white background.
+plt.show()
+#ani = FuncAnimation(fig, update, frames=frame_gen, cache_frame_data=False)
+#ani.save("transit_sim.mp4", writer='ffmpeg', fps=framerate, extra_args=['-vcodec', 'libx264', "-level", "3.0", "-pix_fmt", "yuv420p"])  # For MP4, white background.
